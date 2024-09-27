@@ -1,0 +1,12 @@
+input {
+  border: none;
+  outline: none;
+}
+
+input:not(:focus):invalid {
+  border: 2px solid red;
+}
+
+input:not(:focus):valid {
+  border: 2px solid green;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form
+      action="./save-successful.html"
+      method="get"
+      autocomplete="on"
+      name="mainForm"
+    >
+      <div>
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="First name"
+          minlength="2"
+          maxlength="15"
+          required
+        />
+      </div>
+      <div>
+        <label for="familyName">Family Name:</label>
+        <input
+          type="text"
+          id="familyName"
+          name="familyName"
+          placeholder="Family name"
+          minlength="2"
+          maxlength="15"
+          required
+        />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          minlength="3"
+          maxlength="20"
+          pattern="^[a-zA-Z0-9]+$"
+        />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          required
+        />
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="Age"
+          max="120"
+          min="18"
+          required
+        />
+      </div>
+      <div>
+        <label for="age">DOB:</label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          min="1900-01-01"
+          max="2006-01-01"
+          step="10"
+        />
+      </div>
+      <div>
+        <label for="tel">Tel:</label>
+        <input type="tel" id="tel" name="tel" />
+      </div>
+      <div>
+        <label for="theme">Theme:</label>
+        <input type="color" id="theme" name="theme" />
+      </div>
+      <div>
+        <label for="gender">Gender:</label>
+        Male:<input type="radio" id="male" name="gender" value="male" />
+        Female:<input type="radio" id="female" name="gender" value="female" />
+        Other:<input type="radio" id="other" name="gender" value="other" />
+      </div>
+      <div>
+        <label for="terms">Agree with terms and conditions:</label>
+        <input type="checkbox" id="terms" name="terms" />
+      </div>
+
+      <div>
+        <label for="car">Car</label>
+        <select name="cars" id="cars">
+          <optgroup label="german">
+            <option value="vw">Volkswagen</option>
+            <option value="bmw">Bmw</option>
+            <option value="audi">Audi</option>
+          </optgroup>
+          <optgroup label="italian">
+            <option value="ferrari">Ferrari</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div>
+        <input
+          type="hidden"
+          id="hidden"
+          name="hidden"
+          value="This is a demo form"
+        />
+      </div>
+
+      <button type="reset">Reset</button>
+
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
